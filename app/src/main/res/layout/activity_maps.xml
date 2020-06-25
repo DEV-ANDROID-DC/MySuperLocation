@@ -1,0 +1,72 @@
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MapsActivity">
+
+    <TextView
+        android:id="@+id/location_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:text="Location"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/address_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:hint="@string/enter_the_address"
+        app:layout_constraintEnd_toStartOf="@id/locate_imageview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_textview" />
+
+     <ImageView
+         android:id="@+id/locate_imageview"
+         android:layout_width="@dimen/dimen_30dp"
+         android:layout_height="@dimen/dimen_30dp"
+         android:layout_margin="@dimen/dimen_16dp"
+         android:src="@drawable/ic_baseline_location_on_24"
+         app:layout_constraintBottom_toTopOf="@+id/maps"
+
+         app:layout_constraintBottom_toBottomOf="@+id/address_edittext"
+         app:layout_constraintTop_toTopOf="@+id/address_edittext"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toEndOf="@+id/address_edittext"/>
+
+    <fragment
+        android:id="@+id/maps"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/open_settings_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_edittext" />
+
+    <Button
+        android:id="@+id/open_settings_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/open_settings"
+        android:layout_margin="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_directions_24"
+        android:layout_margin="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toTopOf="@+id/open_settings_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MySuperLocation</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="permission_requirement">You need the location permission to use this application.</string>
+    <string name="title_activity_google_maps">Map</string>
+    <string name="enter_the_address">Enter the address</string>
+</resources>
